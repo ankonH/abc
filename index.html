@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Navbar Main Text -->
+            <div class="navbar-text">
+                <p>Find Israeli products and discover alternative options.</p>
+            </div>
+
+            <!-- Hamburger Menu (Visible on Mobile) -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Include Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <div class="main-container" style="margin-top: 70px;">
+        <header>
+            <p>Search by product name to get alternative suggestions!</p>
+        </header>
+
+        <!-- Search Bar Section -->
+        <section class="search-bar-section">
+            <input type="text" id="productSearch" placeholder="Search for a product..." />
+            <button id="searchButton">Search</button>
+            <p id="searchResult1">Search for a product to see details.</p>
+            <div id="searchResultContainer" class="search-result-container hidden">
+                <p id="searchResult"></p>
+            </div>
+        </section>
+
+        <!-- Loading Bar Section (Initially Hidden) -->
+        <div id="loadingBar" class="loading-bar hidden">
+            <div id="progress"></div>
+        </div>
+
+        <!-- Display result section -->
+        <section id="result-section" class="hidden">
+            <h2>Analysis Result</h2>
+            <p id="productResult">Please upload an image.</p>
+        </section>
+    </div>
+
+    <!-- Separate container for Israeli product cart -->
+    <div id="israel-product-container" class="hidden">
+
+        <div id="cartDetails" class="cart-details">
+            <div class="cart-info">
+                <h3>Yes, This is an Israeli Product</h3>
+                <p id="productName"></p>
+                <!-- <p id="productDescription"></p> -->
+                <div class="warning-container">
+                    <p id="warning-text">
+                        Don't buy this product.<br>
+                        Don't sell this product.<br>
+                        Don't work for this company.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="cart-image">
+                <img id="productImage" src="" alt="Product Image" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Separate container for Suggested Alternatives -->
+    <div id="alternatives-container" class="hidden">
+        <h3 id="alt">Suggested Alternatives:</h3>
+        <div id="suggestionsList">
+            <div id="cartDetails" class="cart-details">
+                <div class="cart-info">
+                    <p id="alternativeName"></p>
+                </div>
+                <div class="cart-image">
+                    <img id="productImage" src="" alt="Product Image" />
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
